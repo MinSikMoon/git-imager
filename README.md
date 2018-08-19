@@ -1,5 +1,7 @@
 # git-imager
-detect image tags in HTML with base64-data then upload all that images to github repository, finally you can get HTML that contains img tags with github-url.  
+1. detect image tags in HTML with base64-data 
+2. then upload all that images to github repository, and replace image src with generated github-url
+3. finally you can get HTML that contains img tags with github-url.  
 # example 
 - source HTML
 ````HTML
