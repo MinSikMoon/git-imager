@@ -50,13 +50,11 @@ app.post("/summernoteSubmit", function(req, res){
 ````html
 //in my case, i used sourceHtml that generated from summernote html editor
 //and sourceHtml looks like this
-/*
-  <p>
-  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2..........something long base64 data" 
-       data-filename="testfornodejs.jpg" style="width: 100px;">
-  <br>
-  </p>
-*/
+<p>
+<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2..........something long base64 data" 
+  data-filename="testfornodejs.jpg" style="width: 100px;">
+<br>
+</p>
 ````
 
 __4. set eventHandler for event named 'makeImgUrlHtmlDone' on git-imager object,__</br>
@@ -69,12 +67,24 @@ imager.setEventHandler('makeImgUrlHtmlDone', function(convertedHtml){
 ````
 ````html
 // convertedHtml will be like this
-/*
 <p>
 <img src="https://raw.githubusercontent.com/MinSikMoon/database_test/master/15346903140862939134887091734.jpg" 
   data-filename="testfornodejs.jpg" style="width: 100px;">
 <br>
 </p>
-*/
 ````
 
+# 4. Usage Example
+````javascript
+var gitImager = require('git-imager');
+var imager = new gitImager('[user-name]', '[token]', '[repository for image]');
+
+imager.setEventHandler('makeImgUrlHtmlDone', function(convertedHtml){
+    console.log(convertedHtml);
+});
+
+app.post("/summernoteSubmit", function(req, res){
+    var sourceHtml = req.body.editordata;
+    imager.makeImgUrlHtml(sourceHtml);
+})
+````
