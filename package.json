@@ -1,22 +1,32 @@
 {
-    "name": "git-imager",
-    "version": "0.1.0",
-    "description": "upload all base64 img data in html to github and replace src attribute to github-url",
-    "author": { "name": "MinSikMoon", "url": "https://github.com/MinSikMoon" },
-    "contributors": [
-    ],
-    "repository": {
-      "type": "git",
-      "url": "git://github.com/MinSikMoon/git-imager.git"
-    },
-    "bugs": {
-      "url": "https://github.com/MinSikMoon/git-imager/issues"
-    },
-    "main": "./git-imager.js",
-    "engines": { "node": ">= 0.4.0" },
-    "licenses": [ {
-      "type": "MIT",
-      "url": "http://www.opensource.org/licenses/MIT" 
-    } ],
-    "keywords": ["image", "base64", "html", "convert", "github-api", "src", "git image upload"]
-  }
+  "name": "git-imager",
+  "version": "1.0.0",
+  "description": "upload all base64 img data in html to github and replace src attribute to github-url",
+  "main": "./git-imager.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MinSikMoon/git-imager.git"
+  },
+  "keywords": [
+    "image",
+    "base64",
+    "html",
+    "convert",
+    "github-api",
+    "src",
+    "github",
+    "image",
+    "upload",
+    "image",
+    "commit"
+  ],
+  "author": "MinSikMoon",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/MinSikMoon/git-imager/issues"
+  },
+  "homepage": "https://github.com/MinSikMoon/git-imager#readme"
+}
