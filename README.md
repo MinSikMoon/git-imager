@@ -30,6 +30,8 @@ __2. import git-imager and make git-imager object__
 ````javascript
 var gitImager = require('git-imager');
 var imager = new gitImager('[your github username]', '[your-github-token]', '[repository where to save images]');
+````
+````javascript
 /*
  -- example
 var imager = new gitImager('MinSikMoon', 'abcd577dsaadffa/aeifnvic', 'database_test');
