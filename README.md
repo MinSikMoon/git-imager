@@ -21,12 +21,12 @@
 </p>
 ````
 # 3. How to use
-1. npm install
+__1. npm install__
 ````cmd
 npm install --save git-imager
 ````
 
-2. import git-imager and make git-imager object
+__2. import git-imager and make git-imager object__
 ````javascript
 var gitImager = require('git-imager');
 var imager = new gitImager('[your github username]', '[your-github-token]', '[repository where to save images]');
@@ -36,7 +36,7 @@ var imager = new gitImager('MinSikMoon', 'abcd577dsaadffa/aeifnvic', 'database_t
 */ 
 ````
 
-3. makeImgUrlHtml(SourceHtml)
+__3. makeImgUrlHtml(SourceHtml)__
 ````javascript
 void makeImgUrlHtml(sourceHtml)
 ````
@@ -59,8 +59,8 @@ app.post("/summernoteSubmit", function(req, res){
 */
 ````
 
-4. set eventHandler for event named 'makeImgUrlHtmlDone' on git-imager object,</br>
-   so you can get img-url-converted-HTML
+__4. set eventHandler for event named 'makeImgUrlHtmlDone' on git-imager object,__</br>
+   __so you can get img-url-converted-HTML__
 ````javascript
 imager.setEventHandler('makeImgUrlHtmlDone', function(convertedHtml){
     console.log(convertedHtml);
