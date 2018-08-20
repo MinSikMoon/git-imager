@@ -44,7 +44,7 @@ __3. makeImgUrlHtml(SourceHtml)__
 void makeImgUrlHtml(sourceHtml)
 ````
 * example 1
-````javascript
+````html
      var sourceHtml = "<p>
                        <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2..........something long base64 data" 
                             data-filename="testfornodejs.jpg" style="width: 100px;">
