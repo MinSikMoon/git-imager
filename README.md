@@ -40,6 +40,7 @@ var imager = new gitImager('MinSikMoon', 'abcd577dsaadffa/aeifnvic', 'database_t
 ````
 
 __3. makeImgUrlHtml(SourceHtml)__
+* function
 ````javascript
 void makeImgUrlHtml(sourceHtml)
 ````
@@ -70,11 +71,13 @@ app.post("/summernoteSubmit", function(req, res){
 
 __4. set eventHandler for event named 'makeImgUrlHtmlDone' on git-imager object,__</br>
    __so you can get img-url-converted-HTML__
+* function (git-imager emits event named 'makeImgUrlHtmlDone' when makeImgUrlHtml function finished.)
 ````javascript
 void setEventHandler('eventName', funtion(convertedHtml){
      //do whatever you want with convertedHtml in this callback-function.
 })
 ````
+* example
 ````javascript
 imager.setEventHandler('makeImgUrlHtmlDone', function(convertedHtml){
     console.log(convertedHtml);
