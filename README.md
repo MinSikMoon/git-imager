@@ -5,7 +5,7 @@
 3. finally you can get HTML that contains img tags with github-url.  
 *. ex) you can use git-imager with summenote html editor.
 # 2. example 
-- source HTML will..
+- source HTML will be..
 ````HTML
 <p>
 <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2..........something long base64 data" 
@@ -43,7 +43,16 @@ __3. makeImgUrlHtml(SourceHtml)__
 ````javascript
 void makeImgUrlHtml(sourceHtml)
 ````
-* example
+* example 1
+````javascript
+     var sourceHtml = "<p>
+                       <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2..........something long base64 data" 
+                            data-filename="testfornodejs.jpg" style="width: 100px;">
+                       <br>
+                       </p>";
+     imager.makeImgUrlHtml(sourceHtml);
+````
+* example 2 (in situation when you get source-html from summernote editor)
 ````javascript
 app.post("/summernoteSubmit", function(req, res){
      var sourceHtml = req.body.editordata;
@@ -51,8 +60,7 @@ app.post("/summernoteSubmit", function(req, res){
 })     
 ````
 ````html
-//in my case, i used sourceHtml that generated from summernote html editor
-//and sourceHtml looks like this
+//sourceHtml looks like this
 <p>
 <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2..........something long base64 data" 
   data-filename="testfornodejs.jpg" style="width: 100px;">
