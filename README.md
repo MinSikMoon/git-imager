@@ -1,5 +1,4 @@
 [![NPM version](https://badge.fury.io/js/git-imager.svg)](http://badge.fury.io/js/git-imager)
-
 # 1. git-imager 
 1. detect image tags in HTML with base64-data 
 2. then upload all that images to github repository, and replace image src with generated github-url
@@ -92,3 +91,6 @@ app.post("/summernoteSubmit", function(req, res){
     imager.makeImgUrlHtml(sourceHtml);
 })
 ````
+
+# in 1.0.3
+* remove singleton eventemitter and make gitImager object have its own eventemitter.
