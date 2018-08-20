@@ -1,8 +1,12 @@
 {
   "name": "git-imager",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "upload all base64 img data in html to github and replace src attribute to github-url",
   "main": "./git-imager.js",
+  "dependencies": {
+    "request": "~2.88.0",
+    "events": "~3.0.0"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
