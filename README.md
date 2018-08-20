@@ -4,7 +4,7 @@
 1. detect image tags in HTML with base64-data 
 2. then upload all that images to github repository, and replace image src with generated github-url
 3. finally you can get HTML that contains img tags with github-url.  
-
+*. ex) you can use git-imager with summenote html editor.
 # 2. example 
 - source HTML will..
 ````HTML
