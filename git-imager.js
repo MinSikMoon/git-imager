@@ -1,14 +1,13 @@
 module.exports=GitImager;
 var request = require('request');
 var events = require('events');
-var eventEmitter = new events.EventEmitter();
 
 function GitImager(userName, token, imageRepository){
     //1. properties
     this.userName = userName;
     this.token = token;
     this.imageRepository = imageRepository;
-    this.eventController = eventEmitter;
+    this.eventController = new events.EventEmitter();
     this.imgArr = [];
     this.imgTagNum = 0;
 
@@ -17,7 +16,7 @@ function GitImager(userName, token, imageRepository){
         this.imgArr = [];
         this.imgArr = setImgArr(sourceHtml, this.imgArr);
         this.imgTagNum = this.imgArr.length;
-        makeGitRequest(this.userName, this.token, this.imageRepository, 0, this.imgTagNum, this.imgArr, sourceHtml);
+        makeGitRequest(this.userName, this.token, this.imageRepository, 0, this.imgTagNum, this.imgArr, sourceHtml, this.eventController);
     }
 
     //3. setEventFunction
@@ -59,7 +58,7 @@ var setImgArr = function(htmlText, imgTagArr){
     return result;
 }
 
-var makeGitRequest = function(userName, token, repository, idx, maxCnt, imgTagArr, html){
+var makeGitRequest = function(userName, token, repository, idx, maxCnt, imgTagArr, html, eventEmitter){
     if(idx < maxCnt && maxCnt != 0){
         var baseUrl = "https://api.github.com";
         var imgName = Date.now() + String(Math.random() * (900000000)).replace('.','') +'.'+ imgTagArr[idx].imgExt;
@@ -86,7 +85,7 @@ var makeGitRequest = function(userName, token, repository, idx, maxCnt, imgTagAr
                 converted = 'src="' + res.body.content.download_url + '"';
             }
             html = html.replace(/src=\"data:([^\"]+)\"/i, converted); 
-            makeGitRequest(userName, token, repository, ++idx, maxCnt, imgTagArr, html);
+            makeGitRequest(userName, token, repository, ++idx, maxCnt, imgTagArr, html, eventEmitter);
         });
     }else{
         eventEmitter.emit('makeImgUrlHtmlDone', html);
