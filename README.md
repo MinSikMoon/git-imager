@@ -46,12 +46,12 @@ void makeImgUrlHtml(sourceHtml)
 ````
 * example 1
 ````html
-     var sourceHtml = "<p>
-                       <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2..........something long base64 data" 
-                            data-filename="testfornodejs.jpg" style="width: 100px;">
-                       <br>
-                       </p>";
-     imager.makeImgUrlHtml(sourceHtml);
+var sourceHtml = "<p>
+                  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2..........something long base64 data" 
+                       data-filename="testfornodejs.jpg" style="width: 100px;">
+                  <br>
+                  </p>";
+imager.makeImgUrlHtml(sourceHtml);
 ````
 * example 2 (in situation when you get source-html from summernote editor)
 ````javascript
