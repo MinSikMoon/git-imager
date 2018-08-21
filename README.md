@@ -47,7 +47,7 @@ __3. makeImgUrlHtml(SourceHtml)__
 void makeImgUrlHtml(sourceHtml)
 ````
 * example 1
-````html
+````javascript
 imager.makeImgUrlHtml(sourceHtml);
 ````
 
