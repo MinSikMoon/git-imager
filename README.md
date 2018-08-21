@@ -64,19 +64,10 @@ app.post("/summernoteSubmit", function(req, res){
 })     
 ````
 
-````html
-//sourceHtml looks like this
-<p>
-<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2..........something long base64 data" 
-  data-filename="testfornodejs.jpg" style="width: 100px;">
-<br>
-</p>
-````
-
 __4. setEventHandler('eventName', function(convertedHtml){})__ 
 * git-imager emits event named 'makeImgUrlHtmlDone' when makeImgUrlHtml function finished.
 * set event handler for event named 'makeImgUrlHtmlDone' on git-imager object,</br>
-  so you can get converted-HTML__
+  so you can get converted-HTML
   
 * function 
 ````javascript
