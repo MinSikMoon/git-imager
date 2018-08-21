@@ -6,6 +6,7 @@
 2. then upload all that images to github repository, and replace image src with generated github-url
 3. finally you can get HTML that contains img tags with github-url.  
 *. ex) you can use git-imager with summenote html editor.
+
 # 2. example 
 - source HTML will be..
 ````HTML
@@ -23,6 +24,7 @@
 <br>
 </p>
 ````
+
 # 3. How to use
 __1. npm install__
 ````cmd
@@ -34,11 +36,11 @@ __2. import git-imager and make git-imager object__
 var gitImager = require('git-imager');
 var imager = new gitImager('[your github username]', '[your-github-token]', '[repository where to save images]');
 ````
+
 ````javascript
-/*
  -- example
 var imager = new gitImager('MinSikMoon', 'abcd577dsaadffa/aeifnvic', 'database_test');
-*/ 
+ 
 ````
 
 __3. makeImgUrlHtml(SourceHtml)__
@@ -46,6 +48,7 @@ __3. makeImgUrlHtml(SourceHtml)__
 ````javascript
 void makeImgUrlHtml(sourceHtml)
 ````
+
 * example 1
 ````javascript
 imager.makeImgUrlHtml(sourceHtml);
@@ -58,6 +61,7 @@ app.post("/summernoteSubmit", function(req, res){
      imager.makeImgUrlHtml(sourceHtml);
 })     
 ````
+
 ````html
 //sourceHtml looks like this
 <p>
