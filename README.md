@@ -2,6 +2,7 @@
 [![npm](https://img.shields.io/npm/dm/git-imager.svg)]()
 
 # 1. git-imager 
+*. HTML img 태그안의 base64 데이터를 깃헙 레포지토리에 이미지로 올리고 생성된 url로 src 속성을 대체시켜주는 모듈.
 1. detect image tags in HTML with base64-data 
 2. then upload all that images to github repository, and replace image src with generated github-url
 3. finally you can get HTML that contains img tags with github-url.  
