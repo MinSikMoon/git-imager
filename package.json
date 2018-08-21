@@ -1,6 +1,6 @@
 {
   "name": "git-imager",
-  "version": "1.0.3",
+  "version": "1.0.5",
   "description": "upload all base64 img data in html to github and replace src attribute to github-url",
   "main": "./git-imager.js",
   "dependencies": {
