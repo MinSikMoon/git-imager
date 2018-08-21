@@ -73,10 +73,12 @@ app.post("/summernoteSubmit", function(req, res){
 </p>
 ````
 
-__4. set eventHandler for event named 'makeImgUrlHtmlDone' on git-imager object,__</br>
-   __so you can get img-url-converted-HTML__
+__4. setEventHandler('eventName', function(convertedHtml){}) </br> 
+* git-imager emits event named 'makeImgUrlHtmlDone' when makeImgUrlHtml function finished.
+* set event handler for event named 'makeImgUrlHtmlDone' on git-imager object,</br>
+  so you can get converted-HTML__
+  
 * function 
-(git-imager emits event named 'makeImgUrlHtmlDone' when makeImgUrlHtml function finished.)
 ````javascript
 void setEventHandler('eventName', funtion(convertedHtml){
      //do whatever you want with convertedHtml in this callback-function.
