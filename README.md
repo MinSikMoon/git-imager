@@ -27,7 +27,24 @@
 </p>
 ````
 
-# 3. How to use
+# 3. Usage Example Summary
+````javascript
+var gitImager = require('git-imager');
+var imager = new gitImager('[username]', '[token]', '[repository]');
+ 
+imager.setEventHandler('makeImgUrlHtmlDone', function(convertedHtml){
+    console.log(convertedHtml);
+});
+
+var sourceHtml = '<p>'  
+ + '<img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2wBDAAoHBwgHBgoICAgLCgoLDhgQDg0NDh0VFhEYIx8lJCIfIiEmKzcvJik0KSEiMEExNDk7Pj4+JS5ESUM8SDc9Pjv/2wBDAQoLCw4NDhwQEBw7KCIoOzs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozv/wAARCABkAGQDASIAAhEBAxEB/8QAHwAAAQUBAQEBAQEAAAAAAAAAAAECAwQFBgcICQoL/8QAtRAAAgEDAwIEAwUFBAQAAAF9AQIDAAQRBRIhMUEGE1FhByJxFDKBkaEII0KxwRVS0fAkM2JyggkKFhcYGRolJicoKSo0NTY3ODk6Q0RFRkdISUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uHi4+Tl5ufo6erx8vP09fb3+Pn6/8QAHwEAAwEBAQEBAQEBAQAAAAAAAAECAwQFBgcICQoL/8QAtREAAgECBAQDBAcFBAQAAQJ3AAECAxEEBSExBhJBUQdhcRMiMoEIFEKRobHBCSMzUvAVYnLRChYkNOEl8RcYGRomJygpKjU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6goOEhYaHiImKkpOUlZaXmJmaoqOkpaanqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4uPk5ebn6Onq8vP09fb3+Pn6/9oADAMBAAIRAxEAPwD2aiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoqvqErQWE8iHDKhKn0NcrLqF8/ym6lwewbH8q8/F4+GFajJNtm9KhKoro7HNLXBXjS+RuWRhIrqytkkgg8V1+lanHqdsJFG2RcB09D/hUYLMYYpuNrP8y62GlTjzbovUUUV6ZyhRRRQAUUUUAFFFFABRRRQBn65IselS7iAGIXn61yn2iItkSRk/7wrtbm1t7yMR3MKTIGDbXUEZHTisiTwdpEspkaOU5JO0SYXn2HpXjZhl88TUU4vpY7cPXhTjaRzlzcRlQu5Dlh/F0pNK1GaLUY/saNLJ90oB94V0MfgnRUdGMMjleu6Q/N9cf0rZtrK2so9ltBHEvoi4zXNh8oqQmpOVrdjepi6fLypNk1LRRX0R5YUUUUAFFFFABRRRQAUUUUAFJS0UAJRS0UAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQB/9k=" data-filename="testfornodejs.jpg" style="width: 100px;">'
+ + '<br>'
+ + '</p>';
+
+imager.makeImgUrlHtml(sourceHtml);
+````
+
+# 4. How to use
 __1. npm install__
 ````cmd
 npm install --save git-imager
@@ -81,19 +98,6 @@ imager.setEventHandler('makeImgUrlHtmlDone', function(convertedHtml){
     console.log(convertedHtml);
     //do whatever you want with convertedHtml
 });
-````
-
-# 4. Usage Example Summary
-````javascript
-var gitImager = require('git-imager');
-var imager = new gitImager('[user-name]', '[token]', '[repository for image]');
-
-imager.setEventHandler('makeImgUrlHtmlDone', function(convertedHtml){
-    console.log(convertedHtml);
-});
-
-imager.makeImgUrlHtml(sourceHtml);
-
 ````
 
 # in 1.0.3
