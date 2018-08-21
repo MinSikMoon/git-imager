@@ -1,4 +1,6 @@
-[![NPM version](https://badge.fury.io/js/git-imager.svg)](http://badge.fury.io/js/git-imager)
+[![NPM version](https://badge.fury.io/js/git-imager.svg)](http://badge.fury.io/js/git-imager) 
+[![npm](https://img.shields.io/npm/dm/git-imager.svg)]()
+
 # 1. git-imager 
 1. detect image tags in HTML with base64-data 
 2. then upload all that images to github repository, and replace image src with generated github-url
