@@ -93,10 +93,8 @@ imager.setEventHandler('makeImgUrlHtmlDone', function(convertedHtml){
     console.log(convertedHtml);
 });
 
-app.post("/summernoteSubmit", function(req, res){
-    var sourceHtml = req.body.editordata;
-    imager.makeImgUrlHtml(sourceHtml);
-})
+imager.makeImgUrlHtml(sourceHtml);
+
 ````
 
 # in 1.0.3
