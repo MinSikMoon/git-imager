@@ -48,13 +48,9 @@ void makeImgUrlHtml(sourceHtml)
 ````
 * example 1
 ````html
-var sourceHtml = "<p>
-                  <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/2..........something long base64 data" 
-                       data-filename="testfornodejs.jpg" style="width: 100px;">
-                  <br>
-                  </p>";
 imager.makeImgUrlHtml(sourceHtml);
 ````
+
 * example 2 (in situation when you get source-html from summernote editor)
 ````javascript
 app.post("/summernoteSubmit", function(req, res){
@@ -73,7 +69,8 @@ app.post("/summernoteSubmit", function(req, res){
 
 __4. set eventHandler for event named 'makeImgUrlHtmlDone' on git-imager object,__</br>
    __so you can get img-url-converted-HTML__
-* function (git-imager emits event named 'makeImgUrlHtmlDone' when makeImgUrlHtml function finished.)
+* function 
+(git-imager emits event named 'makeImgUrlHtmlDone' when makeImgUrlHtml function finished.)
 ````javascript
 void setEventHandler('eventName', funtion(convertedHtml){
      //do whatever you want with convertedHtml in this callback-function.
@@ -86,16 +83,8 @@ imager.setEventHandler('makeImgUrlHtmlDone', function(convertedHtml){
     //do whatever you want with convertedHtml
 });
 ````
-````html
-// convertedHtml will be like this
-<p>
-<img src="https://raw.githubusercontent.com/MinSikMoon/database_test/master/15346903140862939134887091734.jpg" 
-  data-filename="testfornodejs.jpg" style="width: 100px;">
-<br>
-</p>
-````
 
-# 4. Usage Example
+# 4. Usage Example Summary
 ````javascript
 var gitImager = require('git-imager');
 var imager = new gitImager('[user-name]', '[token]', '[repository for image]');
