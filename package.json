@@ -1,6 +1,6 @@
 {
   "name": "git-imager",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "upload all base64 img data in html to github and replace src attribute to github-url",
   "main": "./git-imager.js",
   "dependencies": {
@@ -15,6 +15,7 @@
     "url": "git+https://github.com/MinSikMoon/git-imager.git"
   },
   "keywords": [
+    "summernote image github",
     "github image upload",
     "github image",
     "summernote",
